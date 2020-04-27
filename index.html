@@ -2,6 +2,8 @@
   <head>Vince</head>
   <body>
     <p id="timeTxt">hello world</p>
+    <p id="meetTime"></p>
+    <p id="loveTime"></p>
   </body>
 </html>
 <script>
@@ -9,12 +11,18 @@
 //   var timeTxt = document.getElementById("timeTxt");
 //   timeTxt.innerHTML = "New text!";
   var myVar=setInterval(function(){myTimer()},1000);
- 
+  let firstTS = Date.parse('2014-01-19T06:30:00.000+08:00');
+  let loveTS = Date.parse('2014-01-31T00:00:00.000+08:00');
   function myTimer()
   {
-      var d=new Date();
-      var t=d.toLocaleTimeString();
-      document.getElementById("timeTxt").innerHTML=t;
+    let d=new Date();
+    let t=d.toLocaleTimeString();
+    let curTS = Date.parse(d);
+    let meetTime = curTS - firstTS;
+    let loveTime = cusTS - loveTS
+    document.getElementById("meetTime").innerHTML = meetTime;
+    document.getElementById("loveTime").innerHTML = loveTime;
+    document.getElementById("timeTxt").innerHTML = t;
   }
 </script>
 <script src="index.js"> </script>
