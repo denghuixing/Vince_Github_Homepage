@@ -6,7 +6,15 @@
 </html>
 <script>
   console.log("hello");
-  var timeTxt = document.getElementById("timeTxt");
-  timeTxt.innerHTML = "New text!";
+//   var timeTxt = document.getElementById("timeTxt");
+//   timeTxt.innerHTML = "New text!";
+//   var myVar=setInterval(function(){myTimer()},1000);
+ 
+  function myTimer()
+  {
+      var d=new Date();
+      var t=d.toLocaleTimeString();
+      document.getElementById("timeTxt").innerHTML=t;
+  }
 </script>
 <script src="index.js"> </script>
