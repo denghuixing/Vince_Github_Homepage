@@ -1,11 +1,13 @@
 <html>
-  <head>Vince</head>
+  <head>
+    <h1>Vince❤️Nicky</h1>
+  </head>
   <body>
     <p id="timeTxt">hello world</p>
     <p>相遇时间：北京时间2014年01月19日早上06:30于青岛至广州的T162次列车上🚄，至今相距：</p>
-    <p id="meetTime"></p>
+    <h1 id="meetTime"></h1>
     <p>相爱时间：北京实际2014年01月31日凌晨00:00大年初一电话里，小璇在海南临高，星星在广东深圳❤️，至今相距：</p>
-    <p id="loveTime"></p>
+    <h1 id="loveTime"></h1>
   </body>
 </html>
 <script>
@@ -22,8 +24,8 @@
     let curTS = Date.parse(d);
     let meetTime = (curTS - firstTS)/1000;
     let loveTime = (curTS - loveTS)/1000;
-    document.getElementById("meetTime").innerHTML = meetTime;
-    document.getElementById("loveTime").innerHTML = loveTime;
+    document.getElementById("meetTime").innerHTML = meetTime + "秒";
+    document.getElementById("loveTime").innerHTML = loveTime + "秒";
     document.getElementById("timeTxt").innerHTML = t;
   }
 </script>
