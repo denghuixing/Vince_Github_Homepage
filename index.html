@@ -4,10 +4,12 @@
   </head>
   <body>
     <p align="center" id="timeTxt">hello world</p>
-    <p>相遇时间：北京时间2014年01月19日早上06:30于青岛至广州的T162次列车上🚄，至今相距：</p>
-    <h1 id="meetTime"></h1>
-    <p>相爱时间：北京实际2014年01月31日凌晨00:00大年初一电话里，小璇在海南临高，星星在广东深圳❤️，至今相距：</p>
-    <h1 id="loveTime"></h1>
+    <h3>相遇时间：北京时间2014年01月19日早上06:30于青岛至广州的T162次列车上🚄，至今相距：</h3>
+    <h1 align="center" id="meetTime"></h1>
+    <h1 align="center" id="meetTimeDetail"></h1>
+    <h3>相爱时间：北京时间2014年01月31日凌晨00:00大年初一电话里，小璇在海南临高，星星在广东深圳❤️，至今相距：</h3>
+    <h1 align="center" id="loveTime"></h1>
+    <h1 align="center" id="loveTimeDetail"></h1>
   </body>
 </html>
 <script>
@@ -24,13 +26,21 @@
     let curTS = Date.parse(d);
     let meetTime = (curTS - firstTS)/1000;
     let loveTime = (curTS - loveTS)/1000;
-    let meetYears = meetTime/(365*24*60*60);
-    let meetMonths = meetTime/(30*24*60*60);
-    let meetDays = meetTime/(24*60*60);
-    let meetHours = meetTime/(60*60);
-    let meetMinutes = meetTime/(60);
-    document.getElementById("meetTime").innerHTML = meetTime+"秒"+" 约合："+meetYears+"年，"+meetMonths+"月，"+meetDays+"天";
+    let meetYears = meetTime/(365*24*60*60).toFixed(2);
+    let meetMonths = meetTime/(30*24*60*60).toFixed(2);
+    let meetDays = meetTime/(24*60*60).toFixed(2);
+    let meetHours = meetTime/(60*60).toFixed(2);
+    let meetMinutes = meetTime/(60).toFixed(2);
+    
+    let loveYears = loveTime/(365*24*60*60).toFixed(2);
+    let loveMonths = loveTime/(30*24*60*60).toFixed(2);
+    let loveDays = loveTime/(24*60*60).toFixed(2);
+    let loveHours = loveTime/(60*60).toFixed(2);
+    let loveMinutes = loveTime/(60).toFixed(2);
+    document.getElementById("meetTime").innerHTML = meetTime+"秒"
+    document.getElementById("meetTimeDetail").innerHTML = " 约合："+meetYears+"年，"+meetMonths+"月，"+meetDays+"天,"+meetHours+"小时，"+meetMinutes+"分钟";
     document.getElementById("loveTime").innerHTML = loveTime + "秒";
+    document.getElementById("loveTimeDetail").innerHTML = " 约合："+loveYears+"年，"+loveMonths+"月，"+loveDays+"天,"+loveHours+"小时，"+loveMinutes+"分钟";
     document.getElementById("timeTxt").innerHTML = t;
   }
 </script>
