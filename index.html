@@ -1,11 +1,13 @@
 <html>
   <head>Vince</head>
   <body>
-    <p>hello world</p>
+    <p id="timeTxt">hello world</p>
   </body>
 </html>
 <script>
   console.log("hello");
+  var timeTxt = document.getElementById("timeTxt");
+  timeTxt.innerHTML = "New text!";
 </script>
 <!-- <script src="index.js"> </script>
  -->
