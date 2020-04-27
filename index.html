@@ -26,17 +26,17 @@
     let curTS = Date.parse(d);
     let meetTime = (curTS - firstTS)/1000;
     let loveTime = (curTS - loveTS)/1000;
-    let meetYears = meetTime/(365*24*60*60).toFixed(2);
-    let meetMonths = meetTime/(30*24*60*60).toFixed(2);
-    let meetDays = meetTime/(24*60*60).toFixed(2);
-    let meetHours = meetTime/(60*60).toFixed(2);
-    let meetMinutes = meetTime/(60).toFixed(2);
+    let meetYears = (meetTime/(365*24*60*60)).toFixed(2);
+    let meetMonths = (meetTime/(30*24*60*60)).toFixed(2);
+    let meetDays = (meetTime/(24*60*60)).toFixed(2);
+    let meetHours = (meetTime/(60*60)).toFixed(2);
+    let meetMinutes = (meetTime/(60)).toFixed(2);
     
-    let loveYears = loveTime/(365*24*60*60).toFixed(2);
-    let loveMonths = loveTime/(30*24*60*60).toFixed(2);
-    let loveDays = loveTime/(24*60*60).toFixed(2);
-    let loveHours = loveTime/(60*60).toFixed(2);
-    let loveMinutes = loveTime/(60).toFixed(2);
+    let loveYears = (loveTime/(365*24*60*60)).toFixed(2);
+    let loveMonths = (loveTime/(30*24*60*60)).toFixed(2);
+    let loveDays = (loveTime/(24*60*60)).toFixed(2);
+    let loveHours = (loveTime/(60*60)).toFixed(2);
+    let loveMinutes = (loveTime/(60)).toFixed(2);
     document.getElementById("meetTime").innerHTML = meetTime+"秒"
     document.getElementById("meetTimeDetail").innerHTML = " 约合："+meetYears+"年，"+meetMonths+"月，"+meetDays+"天,"+meetHours+"小时，"+meetMinutes+"分钟";
     document.getElementById("loveTime").innerHTML = loveTime + "秒";
