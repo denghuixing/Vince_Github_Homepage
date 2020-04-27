@@ -4,10 +4,10 @@
   </head>
   <body>
     <p align="center" id="timeTxt">hello world</p>
-    <h3>相遇时间：北京时间2014年01月19日早上06:30于青岛至广州的T162次列车上🚄，至今相距：</h3>
+    <h3 align="center">相遇时间：北京时间2014年01月19日早上06:30于青岛至广州的T162次列车上🚄，至今相距：</h3>
     <h1 align="center" id="meetTime"></h1>
     <h4 align="center" id="meetTimeDetail"></h4>
-    <h3>相爱时间：北京时间2014年01月31日凌晨00:00大年初一电话里，小璇在海南临高，星星在广东深圳❤️，至今相距：</h3>
+    <h3 align="center">相爱时间：北京时间2014年01月31日凌晨00:00大年初一电话里，小璇在海南临高，星星在广东深圳❤️，至今相距：</h3>
     <h1 align="center" id="loveTime"></h1>
     <h4 align="center" id="loveTimeDetail"></h4>
   </body>
@@ -38,9 +38,9 @@
     let loveHours = (loveTime/(60*60)).toFixed(2);
     let loveMinutes = (loveTime/(60)).toFixed(2);
     document.getElementById("meetTime").innerHTML = meetTime+"秒"
-    document.getElementById("meetTimeDetail").innerHTML = " 约合："+meetYears+"年，"+meetMonths+"月，"+meetDays+"天,"+meetHours+"小时，"+meetMinutes+"分钟";
+    document.getElementById("meetTimeDetail").innerHTML = " 约合："+meetYears+"年，"+meetMonths+"月，"+meetDays+"天，"+meetHours+"小时，"+meetMinutes+"分钟";
     document.getElementById("loveTime").innerHTML = loveTime + "秒";
-    document.getElementById("loveTimeDetail").innerHTML = " 约合："+loveYears+"年，"+loveMonths+"月，"+loveDays+"天,"+loveHours+"小时，"+loveMinutes+"分钟";
+    document.getElementById("loveTimeDetail").innerHTML = " 约合："+loveYears+"年，"+loveMonths+"月，"+loveDays+"天，"+loveHours+"小时，"+loveMinutes+"分钟";
     document.getElementById("timeTxt").innerHTML = t;
   }
 </script>
